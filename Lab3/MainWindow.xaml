@@ -20,7 +20,7 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Label x:Name="LabVessel" Content="Naczynie" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Label x:Name="LabVessel" Content="Naczynie" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="18,0,0,0"/>
         <Label x:Name="LabVolume" Content="Pojemność naczynia:" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1"/>
         <Label x:Name="LabSubstancePercent" Content="Zawartość substancji [%]" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2"/>
         <Label x:Name="LabNumberOfVessel" Content="Liczba sztuk naczyń" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3"/>
@@ -30,12 +30,16 @@
         <Label x:Name="LabResultSubstance" Content="Objętość czystej substancji:" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Row="5" Margin="0,18,0,0"/>
 
 
-        <ComboBox x:Name="ComboBoxVessel"  Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="120" SelectionChanged="OnChangedVessel"/>
+        <ComboBox x:Name="ComboBoxVessel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" SelectionChanged="OnChangedVessel" 
+                  ItemsSource="{Binding Vessels}" DisplayMemberPath="Name" Margin="112,19,0,0"/>
 
         <TextBox x:Name="TextBoxVolume" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="120" TextChanged="OnChangeValue"/>
         <TextBox x:Name="TextBoxSubstancePercent" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="2" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="120" TextChanged="OnChangeValue"/>
         <TextBox x:Name="TextBoxNumber" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="3" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="120" TextChanged="OnChangeValue"/>
         <Label x:Name="LabelResultVolumeOutput" Grid.Column="1" Content="" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center"/>
         <Label x:Name="LabelResultSubstanceOutput" Grid.Column="1" Content="" HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Top" Margin="0,18,0,0"/>
+        <Label x:Name="LabMixture" Content="Roztwór" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="23,0,0,0" Grid.Column="1"/>
+        <ComboBox x:Name="ComboBoxMixture" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" SelectionChanged="OnChangedVessel" 
+            ItemsSource="{Binding Vessels}" DisplayMemberPath="Mixtures" Margin="112,19,0,0" Grid.Column="1"/>
     </Grid>
 </Window>
