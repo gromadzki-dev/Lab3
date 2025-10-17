@@ -30,11 +30,11 @@
         <Label x:Name="LabResultSubstance" Content="Objętość czystej substancji:" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Row="5" Margin="0,18,0,0"/>
 
 
-        <ComboBox x:Name="ComboBoxVessel"  Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="120" SelectedValue="{Binding SelectedId}" DataContextChanged="OnChangeValue"/>
+        <ComboBox x:Name="ComboBoxVessel"  Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="120" SelectedValue="{Binding SelectedId}" DataContextChanged="OnChangedVessel"/>
 
-        <TextBox x:Name="TextBoxVolume" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="120"/>
-        <TextBox x:Name="TextBoxSubstancePercent" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="2" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="120"/>
-        <TextBox x:Name="TextBoxNumber" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="3" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="120"/>
+        <TextBox x:Name="TextBoxVolume" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="120" DataContextChanged="OnChangeValue"/>
+        <TextBox x:Name="TextBoxSubstancePercent" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="2" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="120" DataContextChanged="OnChangeValue"/>
+        <TextBox x:Name="TextBoxNumber" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="3" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="120" DataContextChanged="OnChangeValue"/>
         <Label x:Name="LabResultVolumeOutput" Grid.Column="1" Content="" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center"/>
         <Label x:Name="LabResultSubstanceOutput" Grid.Column="1" Content="" HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Top" Margin="0,18,0,0"/>
     </Grid>
