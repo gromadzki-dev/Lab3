@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Lab3"
         mc:Ignorable="d"
-        Title="Kalkulator procentowy" Height="350" Width="500">
+        Title="Kalkulator procentowy" Height="350" Width="500" MinHeight="300" MinWidth="350">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -26,7 +26,7 @@
         <Label x:Name="LabNumberOfVessel" Content="Liczba sztuk naczyń" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3"/>
 
 
-        <Label x:Name="LabResultVolume" Content="Łączna objętość płynu:" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Row="4" Margin="0,19,0,0"/>
+        <Label x:Name="LabResultVolume" Content="Łączna objętość płynu:" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4"/>
         <Label x:Name="LabResultSubstance" Content="Objętość czystej substancji:" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Row="5" Margin="0,18,0,0"/>
 
 
@@ -35,7 +35,7 @@
         <TextBox x:Name="TextBoxVolume" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="120" DataContextChanged="OnChangeValue"/>
         <TextBox x:Name="TextBoxSubstancePercent" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="2" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="120" DataContextChanged="OnChangeValue"/>
         <TextBox x:Name="TextBoxNumber" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="3" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="120" DataContextChanged="OnChangeValue"/>
-        <Label x:Name="LabResultVolumeOutput" Grid.Column="1" Content="" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center"/>
-        <Label x:Name="LabResultSubstanceOutput" Grid.Column="1" Content="" HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Top" Margin="0,18,0,0"/>
+        <Label x:Name="LabResultVolumeOutput" Grid.Column="1" Content="" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" Width="199"/>
+        <Label x:Name="LabResultSubstanceOutput" Grid.Column="1" Content="" HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Top" Margin="0,18,0,0" Width="199"/>
     </Grid>
 </Window>
