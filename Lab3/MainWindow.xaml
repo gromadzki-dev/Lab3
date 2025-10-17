@@ -39,7 +39,7 @@
         <Label x:Name="LabelResultVolumeOutput" Grid.Column="1" Content="" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center"/>
         <Label x:Name="LabelResultSubstanceOutput" Grid.Column="1" Content="" HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Top" Margin="0,18,0,0"/>
         <Label x:Name="LabMixture" Content="Roztwór" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="23,0,0,0" Grid.Column="1"/>
-        <ComboBox x:Name="ComboBoxMixture" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" SelectionChanged="OnChangedVessel" 
-            ItemsSource="{Binding Vessels}" DisplayMemberPath="Mixtures" Margin="112,19,0,0" Grid.Column="1"/>
+        <ComboBox x:Name="ComboBoxMixture" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" SelectionChanged="OnChangedMixture" 
+            ItemsSource="{Binding Mixtures}" DisplayMemberPath="Name" Margin="112,19,0,0" Grid.Column="1"/>
     </Grid>
 </Window>
