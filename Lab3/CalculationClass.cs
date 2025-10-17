@@ -8,12 +8,10 @@ namespace lab3
 {
     internal class CalculationClass
     {
-        private double Volume { get; set; }
-        private double Percentage { get; set; }
-        private int Amount { get; set; }
+        public double Volume { get; set; }
+        public double Percentage { get; set; }
+        public int Amount { get; set; }
         public double TotalVolume() => Volume * Amount;
         public double PureSubstancePercentage() => TotalVolume() * (Percentage / 100);
-
-        public string GetSomething() => Volume.ToString();
     }
 }
