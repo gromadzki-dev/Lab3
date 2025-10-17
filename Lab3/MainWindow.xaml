@@ -5,8 +5,36 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Lab3"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Kalkulator procentowy" Height="450" Width="600">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
 
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label x:Name="LabVessel" Content="Naczynie" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Label x:Name="LabVolume" Content="Pojemność naczynia:" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1"/>
+        <Label x:Name="LabSubstancePercent" Content="Zawartość substancji [%]" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2"/>
+        <Label x:Name="LabNumberOfVessel" Content="Liczba sztuk naczyń" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Row="3" Margin="0,21,0,0"/>
+
+
+        <Label x:Name="LabResultVolume" Content="Łączna objętość płynu:" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Row="4" Margin="0,19,0,0"/>
+        <Label x:Name="LabResultSubstance" Content="Objętość czystej substancji:" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Row="5" Margin="0,18,0,0"/>
+
+
+        <ComboBox x:Name="ComboBoxPreset" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="120"/>
+        <TextBox x:Name="TextBoxVessel" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="120"/>
+        <TextBox x:Name="TextBoxVolume" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="2" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="120"/>
+        <TextBox x:Name="TextBoxSubstancePercent" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="3" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="0,25,0,0"/>
+        <Label x:Name="LabResultVolumeOutput" Grid.Column="1" Content="" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center"/>
+        <Label x:Name="LabResultSubstanceOutput" Grid.Column="1" Content="" HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Top" Margin="0,18,0,0"/>
     </Grid>
 </Window>
