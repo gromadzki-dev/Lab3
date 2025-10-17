@@ -14,6 +14,6 @@ namespace lab3
         public double TotalVolume() => Volume * Amount;
         public double PureSubstancePercentage() => TotalVolume() * (Percentage / 100);
 
-        public string GetSomething() => (string)Volume;
+        public string GetSomething() => Volume.ToString();
     }
 }
