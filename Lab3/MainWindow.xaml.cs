@@ -13,12 +13,10 @@ using System.Windows.Shapes;
 
 namespace Lab3
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public ObservableCollection<Vessels> Vessels { get; set; }
+        public ObservableCollection<Mixtures> Mixtures { get; set; }
 
         public MainWindow()
         {
@@ -30,6 +28,14 @@ namespace Lab3
                 new Vessels { Name = "Kubek", Volume = 300 },
                 new Vessels { Name = "Szklanka", Volume = 250 }
             };
+
+            Mixtures = new ObservableCollection<Mixtures>
+            {
+                new Mixtures { Name = "Olej w wodzie", Volume = 500, Percentage = 50, Amount = 2 },
+                new Mixtures { Name = "Płyn w wodzie", Volume = 750, Percentage = 77, Amount = 1 },
+                new Mixtures { Name = "Czekolada w wodzie", Volume = 1500, Percentage = 90, Amount = 4 },
+            };
+
             DataContext = this;
         }
 
@@ -78,7 +84,22 @@ namespace Lab3
 
         private void OnChangedVessel(object sender, SelectionChangedEventArgs e)
         {
-            
+            var selectedClass = ComboBoxVessel.SelectedItem as Vessels;
+
+            if (selectedClass == null) return;
+
+            TextBoxVolume.Text = selectedClass.Volume.ToString();
+        }
+
+        private void OnChangedMixture(object sender, SelectionChangedEventArgs e)
+        {
+            var selectedClass = ComboBoxVessel.SelectedItem as Mixtures;
+
+            if (selectedClass == null) return;
+
+            TextBoxVolume.Text = selectedClass.Volume.ToString();
+            TextBoxSubstancePercent.Text = selectedClass.Percentage.ToString();
+            TextBoxNumber.Text = selectedClass.Amount.ToString();
         }
 
         private void ClearContent() 
