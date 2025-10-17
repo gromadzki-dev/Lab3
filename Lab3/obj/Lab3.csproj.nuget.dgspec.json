@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\boxha\\Dev\\Uczelnia\\Lab3\\Lab3\\Lab3.csproj": {}
+    "C:\\Users\\Incogni\\source\\repos\\lab32\\Lab3\\Lab3.csproj": {}
   },
   "projects": {
-    "C:\\Users\\boxha\\Dev\\Uczelnia\\Lab3\\Lab3\\Lab3.csproj": {
+    "C:\\Users\\Incogni\\source\\repos\\lab32\\Lab3\\Lab3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\boxha\\Dev\\Uczelnia\\Lab3\\Lab3\\Lab3.csproj",
+        "projectUniqueName": "C:\\Users\\Incogni\\source\\repos\\lab32\\Lab3\\Lab3.csproj",
         "projectName": "Lab3",
-        "projectPath": "C:\\Users\\boxha\\Dev\\Uczelnia\\Lab3\\Lab3\\Lab3.csproj",
-        "packagesPath": "C:\\Users\\boxha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\boxha\\Dev\\Uczelnia\\Lab3\\Lab3\\obj\\",
+        "projectPath": "C:\\Users\\Incogni\\source\\repos\\lab32\\Lab3\\Lab3.csproj",
+        "packagesPath": "C:\\Users\\Incogni\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Incogni\\source\\repos\\lab32\\Lab3\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\boxha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Incogni\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
