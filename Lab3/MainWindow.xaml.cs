@@ -93,7 +93,7 @@ namespace Lab3
 
         private void OnChangedMixture(object sender, SelectionChangedEventArgs e)
         {
-            var selectedClass = ComboBoxVessel.SelectedItem as Mixtures;
+            var selectedClass = ComboBoxMixture.SelectedItem as Mixtures;
 
             if (selectedClass == null) return;
 
