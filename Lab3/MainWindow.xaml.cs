@@ -25,5 +25,10 @@ namespace Lab3
         {
 
         }
+
+        private void OnChangedVessel(object sender, DependencyPropertyChangedEventArgs e)
+        {
+
+        }
     }
 }
