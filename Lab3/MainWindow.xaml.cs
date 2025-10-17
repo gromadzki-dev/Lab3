@@ -20,5 +20,10 @@ namespace Lab3
         {
             InitializeComponent();
         }
+
+        private void OnChangeValue(object sender, DependencyPropertyChangedEventArgs e)
+        {
+
+        }
     }
 }
