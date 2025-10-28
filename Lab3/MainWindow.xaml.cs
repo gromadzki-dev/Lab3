@@ -1,5 +1,6 @@
 ﻿using lab3;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -51,6 +52,23 @@ namespace Lab3
                 ClearContent();
                 return;
             }
+
+            if (Vessels.Any(v => v.Volume == double.Parse(TextBoxVolume.Text)))
+            {
+                foreach (var vessel in Vessels)
+                {
+                    if (vessel.Volume == double.Parse(TextBoxVolume.Text))
+                    {
+                        ComboBoxVessel.SelectedItem = vessel;
+                        break;
+                    }
+                }
+            } 
+            else
+            {
+                ComboBoxVessel.SelectedIndex = -1;
+            }
+
             if (string.IsNullOrEmpty(TextBoxSubstancePercent.Text))
             {
                 ClearContent();
@@ -62,15 +80,30 @@ namespace Lab3
                 return;
             }
 
-            foreach (Vessels v in Vessels)
+            Debug.WriteLine(Mixtures.Any(m => m.Volume == double.Parse(TextBoxVolume.Text) && m.Percentage == double.Parse(TextBoxSubstancePercent.Text) && m.Amount == int.Parse(TextBoxNumber.Text)));
+            // Seems stupid and unnecessary but it's a good way to get less calls on foreach
+            if (Mixtures.Any(m => m.Volume == double.Parse(TextBoxVolume.Text) && m.Percentage == double.Parse(TextBoxSubstancePercent.Text) && m.Amount == int.Parse(TextBoxNumber.Text)))
             {
-                if (v.Volume == double.Parse(TextBoxVolume.Text))
+                foreach (var mixture in Mixtures)
                 {
-                    ComboBoxVessel.SelectedItem = v;
+                    if (mixture.Volume == double.Parse(TextBoxVolume.Text) && mixture.Percentage == double.Parse(TextBoxSubstancePercent.Text) && mixture.Amount == int.Parse(TextBoxNumber.Text))
+                    {
+                        ComboBoxMixture.SelectedItem = mixture;
+                        break;
+                    }
                 }
+            } 
+            else
+            {
+                ComboBoxMixture.SelectedIndex = -1;
             }
 
-            CalculationClass calculation = new CalculationClass { Volume = double.Parse(TextBoxVolume.Text), Percentage = double.Parse(TextBoxSubstancePercent.Text), Amount = int.Parse(TextBoxNumber.Text)};
+            CalculationClass calculation = new CalculationClass 
+            { 
+                Volume = double.Parse(TextBoxVolume.Text), 
+                Percentage = double.Parse(TextBoxSubstancePercent.Text), 
+                Amount = int.Parse(TextBoxNumber.Text) 
+            };
 
             double CalculatedPercentage = calculation.PureSubstancePercentage();
             double TotalVolume = Math.Round(calculation.TotalVolume(), 5);
@@ -82,6 +115,7 @@ namespace Lab3
             LabelResultSubstanceOutput.Content = CalculatedPercentage;
         }
 
+        #region EventHandlers
         private void OnChangedVessel(object sender, SelectionChangedEventArgs e)
         {
             var selectedClass = ComboBoxVessel.SelectedItem as Vessels;
@@ -105,6 +139,7 @@ namespace Lab3
             TextBoxSubstancePercent.Text = selectedClass.Percentage.ToString();
             TextBoxNumber.Text = selectedClass.Amount.ToString();
         }
+        #endregion
 
         private void ClearContent() 
         {
