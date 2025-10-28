@@ -88,6 +88,8 @@ namespace Lab3
 
             if (selectedClass == null) return;
 
+            ComboBoxMixture.SelectedIndex = -1;
+
             TextBoxVolume.Text = selectedClass.Volume.ToString();
         }
 
@@ -96,6 +98,8 @@ namespace Lab3
             var selectedClass = ComboBoxMixture.SelectedItem as Mixtures;
 
             if (selectedClass == null) return;
+
+            ComboBoxVessel.SelectedIndex = -1;
 
             TextBoxVolume.Text = selectedClass.Volume.ToString();
             TextBoxSubstancePercent.Text = selectedClass.Percentage.ToString();
